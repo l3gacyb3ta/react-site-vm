@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: git push origin master ssh://root@206.191.151.187/var/www/html/my-stuff
+      run: ssh -p 22 root@206.191.151.187 "cd /var/www/html/my-stuff; git pull; exit"
 
         
